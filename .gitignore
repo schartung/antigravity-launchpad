@@ -1,0 +1,19 @@
+# Instance artifacts — generated per project, never committed to the template
+sealed-technical-brief.md
+
+# Infra state
+infra/.terraform/
+infra/*.tfplan
+infra/*.tfstate
+infra/*.tfstate.backup
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Secrets — never commit
+*.env
+.env*
+secrets/

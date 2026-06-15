@@ -50,14 +50,13 @@ The MCP requires a GCP project and API key — it cannot be bundled into this sc
 
 ## How to use this scaffold
 
-### 1. Clone and initialize
+### 1. Create your project from this template
+
+Click **Use this template** on [github.com/schartung/antigravity-launchpad](https://github.com/schartung/antigravity-launchpad) and create a new repository under your account. Then clone it locally:
 
 ```bash
-git clone https://github.com/schartung/antigravity-launchpad my-project
-cd my-project
-rm -rf .git
-git init
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO
+cd YOUR_REPO
 ```
 
 ### 2. Open in Antigravity 2.0

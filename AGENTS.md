@@ -18,7 +18,7 @@ scope: global
 Four gates plus a retro. Each gate must close before the next opens. The retro is what closes the loop — it feeds improvements back into the template so the next project starts smarter.
 
 ```
-GATE 1  @gcp-agent-init → /grill-me
+GATE 1  @gcp-project-init → /grill-me
         Output: sealed-technical-brief.md
 
 GATE 2  Developer Knowledge MCP

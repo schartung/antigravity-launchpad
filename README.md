@@ -31,13 +31,13 @@ The Developer Knowledge MCP gives the agent live access to Google's official dev
 
 1. Enable the API in your GCP project: [console.cloud.google.com/apis/library/developerknowledge.googleapis.com](https://console.cloud.google.com/apis/library/developerknowledge.googleapis.com)
 2. Create an API key restricted to the Developer Knowledge API
-3. Add to `~/.gemini/antigravity/mcp_config.json`:
+3. Add to `~/.gemini/config/mcp_config.json`:
 
 ```json
 {
   "mcpServers": {
     "google-developer-knowledge": {
-      "httpUrl": "https://developerknowledge.googleapis.com/mcp",
+      "serverUrl": "https://developerknowledge.googleapis.com/mcp",
       "headers": { "X-Goog-Api-Key": "YOUR_API_KEY" }
     }
   }

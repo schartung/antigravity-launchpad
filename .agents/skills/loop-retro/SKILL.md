@@ -4,7 +4,7 @@ description: >
   Run after the first real production use of a GCP agent built with this
   harness. Structured retrospective that produces a concrete diff against the
   template — proposed updates to AGENTS.md, hard-constraints.md, or
-  gcp-agent-init — so the harness improves from what the project learned.
+  gcp-project-init — so the harness improves from what the project learned.
   This is what closes the loop.
 tags: [retro, loop-engineering, gate-5, template-improvement]
 trigger: on_demand
@@ -44,7 +44,7 @@ What did the architecture get wrong that the Decision Log did not catch?
 Which sealed decision from Gate 1 caused the most rework, confusion, or limitation?
 - The one you would re-open if you were starting over
 - Why it seemed right at Gate 1 and what reality showed instead
-- **Output:** a new question for `gcp-agent-init` that would have surfaced this earlier, or a sharper framing of an existing one
+- **Output:** a new question for `gcp-project-init` that would have surfaced this earlier, or a sharper framing of an existing one
 
 ### 3. Constraint gaps
 What should be in `hard-constraints.md` that wasn't?
@@ -54,10 +54,10 @@ What should be in `hard-constraints.md` that wasn't?
 - **Output:** additions, removals, or rewrites to `hard-constraints.md`
 
 ### 4. Init blind spots
-What question should `gcp-agent-init` be asking at Gate 1 that it didn't?
+What question should `gcp-project-init` be asking at Gate 1 that it didn't?
 - Decisions that had to be made mid-build that should have been sealed upfront
 - Assumptions the agent made that a better interview question would have caught
-- **Output:** proposed additions to the eight required decisions in `gcp-agent-init`
+- **Output:** proposed additions to the core questions in `gcp-project-init`
 
 ### 5. Loop signal
 What would make the next project noticeably faster or safer?
@@ -84,7 +84,7 @@ ADD: [exact text of new constraint]
 REMOVE: [exact text of removed constraint]
 REWRITE: [old text] → [new text]
 
-## gcp-agent-init / The Eight Required Decisions
+## gcp-project-init / Core Questions
 ADD QUESTION: [exact text]
 REWRITE QUESTION [N]: [old text] → [new text]
 
@@ -102,6 +102,6 @@ REWRITE QUESTION [N]: [old text] → [new text]
 1. Run through all five questions with the user. Do not skip any. If a question yields nothing, confirm that explicitly before moving on.
 2. Produce `retro-[project-name].md` with the full answers.
 3. Produce `template-diff.md` with only concrete proposed changes — no narrative, no hedging.
-4. Tell the user: *"Gate 5 complete. Review template-diff.md. Apply any changes you accept back to the template repo and open a PR or commit directly to `antigravity-runway`."*
+4. Tell the user: *"Gate 5 complete. Review template-diff.md. Apply any changes you accept back to the template repo and open a PR or commit directly to `antigravity-launchpad`."*
 
 The loop closes when `template-diff.md` is reviewed and at least one change makes it back into the template. Not every suggestion will be accepted — that is expected. The retro's job is to generate the diff. The human's job is to decide what to merge.

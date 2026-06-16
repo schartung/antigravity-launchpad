@@ -33,7 +33,7 @@ GATE 4  /goal
 GATE 5  @loop-retro  ← after first real production use
         Output: retro-[project].md + template-diff.md
         Loop closes when at least one change from template-diff.md
-        is merged back into antigravity-runway
+        is merged back into antigravity-launchpad
 ```
 
 ---

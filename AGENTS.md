@@ -15,7 +15,7 @@ scope: global
 
 ## Pipeline
 
-Four gates plus a retro. Each gate must close before the next opens. The retro is what closes the loop — it feeds improvements back into the template so the next project starts smarter.
+Five gates. Each gate must close before the next opens. The fifth is a retro — what closes the loop, feeding improvements back into the template so the next project starts smarter.
 
 ```
 GATE 1  @gcp-project-init → /grill-me
@@ -54,6 +54,7 @@ Non-negotiable. Do not propose alternatives without surfacing the trade-off expl
 - **No data egress.** No third-party services that require data to leave the GCP org boundary.
 - **No hardcoded user identifiers.** Emails, IDs, and names belong in runtime configuration or directory lookups, not in code or infra.
 - **No admin backdoor to user state.** Per-user data must be cryptographically isolable at the identity level. Application-layer access control is not sufficient.
+- **No interface layer the user did not seal.** Do not build toward a specific human interface (e.g. Google Chat, Slack) unless it was explicitly sealed in Gate 1. Interface decisions belong to the user, not the template.
 - **No destructive operations without a pause.** Any action that deletes, rotates, or deprovisions user-scoped resources must surface options and wait for explicit instruction.
 - **Secrets via Secret Manager.** No environment variables for credentials. No plaintext values in code, config, or Terraform.
 - **Infrastructure as code.** No manual Cloud Console changes that are not mirrored in Terraform or declarative config.
